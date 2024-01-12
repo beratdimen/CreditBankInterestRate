@@ -1,36 +1,36 @@
 // KREDİ FAİZ UYGULAMASI
 
-let krediSecenekleri = Number(prompt("1-50.000 TL - 12 Ay \n 2-50.000 TL - 24 AY \n 3-100.000 TL - 12 AY \n 4- 100.000 TL - 24 AY"));
+let creditOptions = Number(prompt("1-50.000 TL - 12 Month \n 2-50.000 TL - 24 Month \n 3-100.000 TL - 12 Month \n 4- 100.000 TL - 24 Month"));
 
-if (krediSecenekleri == 1) {
-    let krediTutari = 50000;
-    let ay = 12;
-    let faizOrani = 1.99;
-    let faizTutari = (krediTutari / 100) * (faizOrani) * ay;
-    let toplamOdenecekTutar = krediTutari + faizTutari;
-    let aylikOdenecekTutar = toplamOdenecekTutar / ay;
-    console.log("Bu seçiminizin faiz tutarı:" + faizOrani);
-    console.log("Toplam Ödenecek Tutar:" + toplamOdenecekTutar);
-    console.log("Aylık Ödemeniz Gereken Tutar:" + aylikOdenecekTutar);
+if (creditOptions == 1) {
+    let creditTotal = 50000;
+    let month = 12;
+    let interestRate = 1.99;
+    let interestTotal = (creditTotal / 100) * (interestRate) * month;
+    let totalPay = creditTotal + interestTotal;
+    let monthlyTotalPay = totalPay / month;
+    console.log("Interest Rate :" + interestRate);
+    console.log("Total Amount to be Paid :" + totalPay);
+    console.log("Monthly Total Amount to be Paid:" + monthlyTotalPay);
 
-} else if (krediSecenekleri == 2) {
-    let krediTutari = 50000;
-    let ay = 24;
-} else if (krediSecenekleri == 3) {
-    let krediTutari = 100000;
-    let ay = 12;
-    let faizOrani = 2.19;
-    let faizTutari = (krediTutari / 100) * (faizOrani) * ay;
-    let toplamOdenecekTutar = krediTutari + faizTutari;
-    let aylikOdenecekTutar = toplamOdenecekTutar / ay;
-    console.log("Bu seçiminizin faiz tutarı:" + faizOrani);
-    console.log("Toplam Ödenecek Tutar:" + toplamOdenecekTutar);
-    console.log("Aylık Ödemeniz Gereken Tutar:" + aylikOdenecekTutar);
+} else if (creditOptions == 2) {
+    let creditTotal = 50000;
+    let month = 24;
+} else if (creditOptions == 3) {
+    let creditTotal = 100000;
+    let month = 12;
+    let interestRate = 2.19;
+    let interestTotal = (creditTotal / 100) * (interestRate) * month;
+    let totalPay = creditTotal + interestTotal;
+    let monthlyTotalPay = totalPay / month;
+   console.log("Interest Rate :" + interestRate);
+    console.log("Total Amount to be Paid :" + totalPay);
+    console.log("Monthly Total Amount to be Paid:" + monthlyTotalPay);
 
-} else if (krediSecenekleri == 4) {
-    let krediTutari = 100000;
-    let ay = 24;
+} else if (creditOptions == 4) {
+    let creditTotal = 100000;
+    let month = 24;
 } else {
-    alert("Hatalı Tuşlama Yaptınız!");
+    alert("Incorrect entry! Please try again...");
 }
 
